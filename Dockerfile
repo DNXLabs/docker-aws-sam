@@ -1,7 +1,7 @@
 FROM alpine:3.7
 
 ENV AWSCLI_VERSION=1.16.263
-ENV SAM_VERSION=0.22.0
+ENV SAM_VERSION=0.23.0
 
 RUN apk add --no-cache g++ python3-dev libffi-dev openssl-dev py-setuptools ca-certificates groff less bash make jq gettext-dev curl wget zip git
 
