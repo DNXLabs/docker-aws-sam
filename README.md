@@ -1,4 +1,7 @@
-# docker-aws
+# docker-aws-sam
+
+![Security](https://github.com/DNXLabs/docker-aws-sam/workflows/Security/badge.svg)
+![Lint](https://github.com/DNXLabs/docker-aws-sam/workflows/Lint/badge.svg)
 
 Docker image containing AWS CLI, AWS Shell, and some scripts to ease AWS deployments.
 
@@ -43,3 +46,9 @@ The Docker image has the following:
 - [aws-shell](https://github.com/awslabs/aws-shell)
 - [aws-sam-cli](https://github.com/awslabs/aws-sam-cli)
 - envsubst: quite useful to create file based on a template using env vars
+
+## Author
+App managed by [DNX Solutions](https://github.com/DNXLabs).
+
+## License
+MIT Licensed. See [LICENSE](https://github.com/DNXLabs/docker-aws-sam/blob/master/LICENSE) for full details.
