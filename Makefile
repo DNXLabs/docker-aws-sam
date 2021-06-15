@@ -1,15 +1,10 @@
-VERSION = 0.24.2-dnx1 
-IMAGE_NAME ?= dnxsolutions/aws-sam:$(VERSION)
-TAG = $(VERSION)
+IMAGE_NAME ?= dnxsolutions/aws-sam:latest
 
 build:
 	docker build -t $(IMAGE_NAME) .
 
 shell:
-	docker run --rm -it -v ~/.aws:/root/.aws -v $(PWD):/opt/app --entrypoint "/bin/sh" $(IMAGE_NAME) 
+	docker run --rm -it -v ~/.aws:/root/.aws -v $(PWD):/opt/app --entrypoint "/bin/sh" $(IMAGE_NAME)
 
-gitTag:
-	-git tag -d $(TAG)
-	-git push origin :refs/tags/$(TAG)
-	git tag $(TAG)
-	git push origin $(TAG)
+lint:
+	docker run --rm -i -v $(PWD)/hadolint.yaml:/.config/hadolint.yaml hadolint/hadolint < Dockerfile
